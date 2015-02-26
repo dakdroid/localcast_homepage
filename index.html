@@ -6,7 +6,7 @@
   <title>LocalCast for Chromecast/Upnp-DLNA</title>
 
   <!-- CSS  -->
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
@@ -21,17 +21,17 @@
       </h1>
       <div class="row center">
         <h5 class="header center blue-text">Download:</h5>
-
-        <a href="#modal1" id="download-button-google-play" class="btn-floating waves-effect waves-light green modal-trigger" style="padding:10px; margin:10px">
-          <div class="android-logo">
+        <div>
+        <a href="#modal1" id="download-button-google-play" class="btn-floating btn-large waves-effect waves-light green modal-trigger" >
+          <div class="android-logo" >
           </div>
         </a>
 
-        <a href="#modal2" id="download-button-apple" class="btn-floating waves-effect waves-light blue modal-trigger" style="padding:10px; margin:10px">
+        <a href="#modal2" id="download-button-apple" class="btn-floating btn-large waves-effect waves-light blue modal-trigger">
           <div class="apple-logo">
           </div>
         </a>
-      
+      </div>
       </div>
       <br>
       <br>
@@ -42,22 +42,32 @@
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal white">
-     <a href="https://play.google.com/store/apps/details?id=de.stefanpledl.localcast">
+         <div class="modal-content">
+<a href="https://play.google.com/store/apps/details?id=de.stefanpledl.localcast">
           <img alt="Get it on Google Play" src="http://storage.googleapis.com/localcast_landing_page/playbadge.png" width=70% height=auto/>
      </a>
      <br>
      <a href="http://www.amazon.com/gp/mas/dl/android?p=de.stefanpledl.localcast">
           <img alt="Get it on Amazon" src="http://storage.googleapis.com/localcast_landing_page/amazon_badge.png" width=70% height=auto/>
      </a>
+    </div>
     <br>
     <a href="#" class="waves-effect btn-flat modal-close right">Close</a>
 
   </div>
   <!-- Modal Structure -->
   <div id="modal2" class="modal white">
+    <div class="modal-content">
    <h4>iOS</h4>
-    <p>The iOS version is not ready yet, please come back later.</p>
+    <p>The iOS version is not completely finished, yet. But you can sign up for the Beta !</p>
+      <a href="https://docs.google.com/forms/d/13EDE75Sf6OKe-Q2rrHm6UdS-i4CfBf4qAYrei3Lm81Q/viewform?usp=send_form" 
+         <a class="waves-effect waves-light btn-large">Signup for the Beta</a>
+      </a>
+      
+      
+    </div>
     <a href="#" class="waves-effect btn-flat modal-close right">Close</a>
+    
   </div>
             
 
@@ -127,7 +137,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About</h5>
-          <p class="grey-text lighten-4">Hey there!
+          <p class="white-text">Hey there!
             <br><br>I am just one independent developer, doing stuff like this in my free time. I am studying biology at the University of Regensburg right now. If you want to support me, just buy the Pro Version of the app!<br><br>Cheers Stefan</p>
 
 
@@ -151,7 +161,7 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
+  <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
 
 </body>
