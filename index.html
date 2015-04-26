@@ -1,170 +1,510 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <title>LocalCast for Chromecast/Upnp-DLNA</title>
 
-  <!-- CSS  -->
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="LocalCast - Get all your media on the Chromecast, Nexus Player, Amazon Fire TV or Stick, SmartTV, Xbox or Sonos !">
+    <meta name="author" content="Stefan Pledl">
+
+    <title>LocalCast for Chromecast/Upnp-DLNA</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body background="http://storage.googleapis.com/localcast_landing_page/localcast_homepage/assets/back.png" >
-  
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h4 class="header center black-text">Get your media on the TV with LocalCast</h4>
-
-      <h1 class="header center blue-text">
-        <img src="assets/appicon_ios_transparent_back_512x512.png" height="auto" width="20%"></img>
-      </h1>
-      <div class="row center">
-        <h5 class="header center blue-text">Download:</h5>
-        <div>
-       
-        <a href="http://itunes.apple.com/app/id969804264" id="download-button-apple" class="btn-floating btn-large waves-effect waves-light blue modal-trigger">
-          <div class="apple-logo">
-          </div>
-        </a>
-            
-        <a href="#modal1" id="download-button-google-play" class="btn-floating btn-large waves-effect waves-light green modal-trigger" >
-          <div class="android-logo" >
-        </div>
-        </a>
-      </div>
-      </div>
-      <br>
-      <br>
-
-    </div>
-  </div>
-
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal white">
-         <div class="modal-content">
-<a href="https://play.google.com/store/apps/details?id=de.stefanpledl.localcast">
-          <img alt="Get it on Google Play" src="http://storage.googleapis.com/localcast_landing_page/playbadge.png" width=70% height=auto/>
-     </a>
-     <br>
-     <a href="http://www.amazon.com/gp/mas/dl/android?p=de.stefanpledl.localcast">
-          <img alt="Get it on Amazon" src="http://storage.googleapis.com/localcast_landing_page/amazon_badge.png" width=70% height=auto/>
-     </a>
-    </div>
-    <br>
-    <a href="#" class="waves-effect btn-flat modal-close right">Close</a>
-
-  </div>
-  <!-- Modal Structure -->
-  <div id="modal2" class="modal white">
-    <div class="modal-content">
-   <h4>iOS</h4>
-    <p>The iOS version is not completely finished, yet. But you can sign up for the Beta !</p>
-      <a href="https://docs.google.com/forms/d/13EDE75Sf6OKe-Q2rrHm6UdS-i4CfBf4qAYrei3Lm81Q/viewform?usp=send_form" 
-         <a class="waves-effect waves-light btn-large">Signup for the Beta</a>
-      </a>
-      
-      
-    </div>
-    <a href="#" class="waves-effect btn-flat modal-close right">Close</a>
-    
-  </div>
-            
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-
-
-        <div class="col s12 m4">
-          <div class="card" >
-            <div class="card-image">
-              <img src="http://storage.googleapis.com/localcast_landing_page/localcast_homepage/assets/screenshot-devices.jpg">
-              <span class="card-title">Supported devices</span>
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">LocalCast</a>
             </div>
-            <div class="card-content white">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#troubleshooting">Troubleshooting</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" width="100" height="100" class="wow bounceIn tada" />
+            <div class="header-content-inner">
+                <h2><b>LocalCast</b></h2>
+                <hr>
+                <p>Get all your media on the Chromecast, Nexus Player, SmartTV, Xbox or Sonos !</p>
+                <div class="btn-group btn-group-lg">
+                    <button class="btn btn-default">
+                        <a href="http://itunes.apple.com/app/id969804264"><i class="fa fa-2x fa-apple apple_blue"></i></a> </button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#modal1">
+                        <i class="fa fa-2x fa-android android_green"></i> </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading  wow bounceIn tada">How does this work ?</h2>
+                    <p>
+                        <hr class="primary">
+
+                        <div>
+                            <h3 class="wow bounceIn tada" data-wow-delay=".5s">1. Connect to your receiver.</h3>
+                            <p class="text-faded wow bounceIn tada" data-wow-delay="1.3s"> <i class="fa fa-arrow-right wow bounceIn tada"></i> Touch the <span style="color:#FFC107;">amber</span> button in the app</p>
+                            <h3 class="wow bounceIn tada" data-wow-delay="2.1s">2. Select what to stream.</h3>
+                            <p class="text-faded wow bounceIn tada" data-wow-delay="2.9s"> <i class="fa fa-arrow-right wow bounceIn tada"></i> Choose videos, music or pictures, from wherever you want: Camera Roll, your music library, Instagram, Google Drive or the Web.</p>
+                            <h3 class="wow rollIn tada" data-wow-delay="3.7s">Done, that easy!</h3>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="troubleshooting">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Problems?</h2>
+                    <hr class="primary">
+
+                    <p>Choose a topic</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl page-scroll" href="#device_discovery">Device discovery</a>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl page-scroll" href="#supported_devices">Supported devices</a>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#video_playback">Video Playback - Stutter & Bottlenecks</a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#subtitles">Subtitles - Pan - Zoom - Rotation</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#codecs">Codecs / Formats</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl page-scroll" href="#ps3">PS3 - as DLNA Renderer</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info  btn-xl page-scroll" href="#xbox">Xbox 360 / Xbox One</a>
+                    </div>
+                </div>
+
               
-              <p class="flow-text">Chromecast, Nexus Player, Smart TVs, Sonos, Xbox and a lot more DLNA/Upnp devices...
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#windows">Windows DLNA Server</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#refunds">Refunds</a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#ios">More: iPhone, iPad, iPod</a>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 text-center wow zoomIn tada">
+                    <div class="service-box">
+                        <a class="btn btn-info btn-xl  page-scroll" href="#android">More: Android</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="bg-primary" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Your problem is not listed?
+                        <br>You have a suggestion?
+                        <br>You want to give feedback?</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <a href="https://plus.google.com/109720416927515295704"><i class="fa fa-google-plus fa-3x wow bounceIn white"></i>
+                    <p><span style="color:#fff;">Stefan Pledl (radApps)</span></p></a>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <a href="mailto:dakdroid+flp@gmail.com"><i class="fa fa-envelope-o fa-3x wow bounceIn white"></i>
+                        <p><span style="color:#fff;">email me</span></p></a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
                 <br>
-                <br>LoaclCast supports thousands of devices. If your device isn't supported yet, let me know!</p>
-            </div>
-
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-                           <img src="http://storage.googleapis.com/localcast_landing_page/localcast_homepage/assets/screenshot-images.jpg">
- <span class="card-title">UI</span>
-            </div>
-            <div class="card-content white">
-              <p class="flow-text">The beautiful material user interface let's you find your media in a second.
-                <br><br>Touch the cast button to connect to your device, then choose what to cast. That easy!</p>
-            </div>
-
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-                            <img src="http://storage.googleapis.com/localcast_landing_page/localcast_homepage/assets/screenshot-drawer.jpg">
-
-              <span class="card-title">Sources</span>
-            </div>
-            <div class="card-content white">
-              <p class="flow-text">LocalCast can access your media from a lot of sources. You can browse your media on your device, NAS or Google Drive.
                 <br>
-                <br>If you want to watch a web stream, just share the link with LocalCast or choose LocalCast to open the link.</p>
+                <br>
+                <p>All parts of LocalCast, all my other apps, the Android versions, the iOS versions, this homepage, the Chromecast receiver, most of the artwork, etc. are made only by me - Stefan Pledl.</p>
+                <br>
+                <br>
+                <br>
             </div>
 
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br>
-    <br>
-
-    <div class="section">
-
-    </div>
-  </div>
-
-  <footer class="blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About</h5>
-          <p class="white-text">Hey there!
-            <br><br>I am just one independent developer, doing stuff like this in my free time. I am studying biology at the University of Regensburg right now. If you want to support me, just buy the Pro Version of the app!<br><br>Cheers Stefan</p>
-
 
         </div>
+        <hr>
+        <div class="col-lg-8 col-lg-offset-2 text-center white">
+            <a href="http://www.siphorsepowerdyno.de/impressum.html"><i class="fa fa-info-circle fa-3x wow bounceIn white" ></i><p><span style="color:#fff;">Impressum</span></p></a>
+            <br>
+        </div>
+    </section>
+    <section id="none">
+        <div class="container">
+            <h1 class="section-heading text-center">Troubleshooting</h1>
+        </div>
+
+    </section>
+
+    <section class="bg-primary" id="device_discovery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h1 class="section-heading text-center">Device discovery</h1>
+
+                    <hr>
+                    <h3 class="section-heading text-center">If your device won't show up in LocalCast:</h3>
+                    <p class="text-center">
+                        <br>Make sure that all your devices are on the same network.
+                        <br>
+                        <br>Swipe LocalCast away in the multi tasking menu - reopen it
+                        <br>
+                        <br>Turn WiFi off and on again on your streaming device.
+                        <br>
+                        <br>Reboot all your things (Router, streaming device, receiving device)
+                    </p>
+                    <br>
+                    <br>
 
 
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="supported_devices">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+
+                    <h1 class="section-heading  text-center">Supported devices:</h1>
+                    <p class="text-center">
+                        <br>Chromecast & Nexus Player
+                        <br>
+                        <br>Amazon Fire TV & Stick
+                        <br>
+                        <br>Sonos
+                        <br>
+                        <br>1000s of SmartTVs, Media centers and other DLNA receivers
+                        <br>
+                        <br>Roku is not supported and AppleTV is not supported on the iOS version at the moment
+                        <hr>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="video_playback">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                    <h1 class="section-heading ">Video Playback</h1>
+                    <hr>
+
+                    <h2 class="section-heading">Videos stutter</h2>
+                    <p>Stutter means that your receiver has to stop and buffer the video. Some receivers are smart and will adjust the buffer timings. Some receivers are dumb and will pause every few seconds in order to buffer more.</p>
+                    <br>
+                    <br>
+                    <h3>WiFi</h3>
+                    <p>The Chromecast or the Amazon Fire TV Stick both come with a HDMI extender cord and with a extra power supply unit.
+                        <br>USE BOTH!
+                        <br>The extra juice from the power supply can improve the WiFi signal. The extender brings the dongle further away from the TV, which improves WiFi too.</p>
+                    <br>
+                    <br>
+                    <h3>Bottleneck - Internet streams</h3>
+                    <p>These are usually web optimized video formats. So the bottleneck is most likely either your internet connection or the streams low download speed. In both cases you can't do much to improve this. Sorry</p>
+                    <br>
+                    <br>
+                    <h3>Bottleneck - Local network streams</h3>
+                    <p>Don't try to stream Blue-ray quality movies over WiFi. E.g. the Chromecast only supports 2.4GHz which is not enough to stream those movies. It won't work</p>
+                    <p>Bitrate: Some phones shoot videos with a really high bitrate. See above.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+   <section id="ps3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                    <h1 class="section-heading ">PS3 - as DLNA Renderer</h1>
+                    <hr>
+                   <p>It's not possible. You cannot stream to the PS3. Nope. Buy a Chromecast. Go away now.</p>
+
+                </div>
+            </div>
+    </section>
+  <section id="codecs" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h1 class="section-heading">Codecs / Formats</h1>
+                    <hr>
+                    <p>All receiving devices support a couple of codecs and most video formats.</p>
+                    <p>For example the Chromecast's supported formats and codecs are listed <a href="https://developers.google.com/cast/docs/media"><span style="color:#FFC107;">here</span></a>.</p>
+                    <p>Most video files are containers which hold a video and a audio file. If only one of both plays, then the other one uses a codec which is not supported by your receiving device. To convert the files on your PC I recommend Handbrake</p>
+                    <a href="http://www.handbrake.fr">www.handbrake.fr</a>
+            </div>
+    </section>
+            
+ <section id="subtitles">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h1 class="section-heading">Subtitles - Pan - Zoom - Rotation</h1>
+                    <hr>
+                    <p>Only Google Cast devices support these features, e.g. the Chromecast and the Nexus Player</p>
+                    <br>
+                    <p>You can find these features on the "Now Playing" screen</p>
+                    <h2 class="section-heading  text-center">Subtitles</h2>
+                    <p>If there is a subtitle file with the same name as the video file, you will be asked if the subtitle should be added.</p>
+                    <p>Some DLNA servers support subtitles, some don't. So you might be able to add subtitles from DLNA servers, too.</p>
+                    <h2 class="section-heading  text-center">Opensubtitles.org</h2>
+                    <p>LocalCast has a built-in Opensubtitle search. Just start your movie or series and add you sub in a couple of seconds from the net!</p>
+
+            </div>
+    </section>
+
+      <section class="bg-primary" id="refunds">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h1 class="section-heading  text-center">Refunds</h1>
+                    <hr>
+                        <p>I offer no refunds. You can try the free version as long as you want. Please don't buy the Pro Version if something doesn't work, send me a email instead. <a href="mailto:dakdroid+flp@gmail.com"><i class="fa fa-envelope-o fa-1x white"></i></a> </p>
+                </div>
+            </div>
+    </section>
+
+     <section id="ios">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                    <h1 class="section-heading">iOS</h1>
+                    <hr>
+                    <p>Nothing here yet. Come back later.</p>
+                </div>
+            </div>
+    </section>
+
+    <section class="bg-primary" id="android">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h1 class="section-heading  text-center">Android</h1>
+                    <hr>
+                    <h2 class="section-heading  text-center">Pro Version - Issues</h2>
+                    <p>If you are having problems with the in-app purchase:
+                        <ol>
+                            <li>Uninstall LocalCast</li>
+                            <li>Reboot your device</li>
+                            <li>On a computer, go to the Google Play web portal</li>
+                            <li>Log in with the Google account, which you used to purchase</li>
+                            <li>Trigger the installation of LocalCast to your device from the web portal</li>
+                        </ol>
+                        <p>If this doesn't help, please email me. <a href="mailto:dakdroid+flpa@gmail.com"><i class="fa fa-envelope-o fa-1x white"></i></a> </p>
+
+                </div>
+            </div>
+    </section>
+          
+    <section id="xbox">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                    <h1 class="section-heading">Xbox 360</h1>
+                    <hr>
+                    <p>Xbox 360 Settings: Turn "Play To" on</p>
+                    <p>If it doesn't work: Turn "Play To" off and on</p>
+                    <br><br>
+                    <h1 class="section-heading">Xbox One</h1>
+                    <hr>
+                    <p>Install Xbox Video and Xbox Music</p>
+                    <p>Xbox One Settings: Turn "Play To" on</p>
+                    <p>If it doesn't work: Turn "Play To" off and on</p>                
+                    <p>Playing a game isn't possible while casting.</p>
+                </div>
+            </div>
+    </section>
         
-        <a class="blue-text lighten-5" href="https://plus.google.com/109720416927515295704/posts">Follow me on Google Plus</a><br>
-        <a class="blue-text lighten-5" href="http://www.siphorsepowerdyno.de/impressum.html">Impressum</a><br>
-        <a class="blue-text lighten-5" href="http://materializecss.com">This page uses Materialize</a><br>
+           <section id="windows" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
 
-      </div>
+                    <h1 class="section-heading">Windows DLNA Server</h1>
+                    <hr>
+                    <p>The computer's network has to be set to a home network!</p>
+                    <p><a href="https://www.google.com/q=windows%20home%20network%20setup"><span style="color:#FFC107;">See here</span></a></p>
+                </div>
+            </div>
+    </section>
 
+       
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+
+                    <a href="https://play.google.com/store/apps/details?id=de.stefanpledl.localcast">
+                        <img alt="Get it on Google Play" src="http://storage.googleapis.com/localcast_landing_page/playbadge.png" width=70% height=auto/>
+                    </a>
+                    <br>
+                    <a href="http://www.amazon.com/gp/mas/dl/android?p=de.stefanpledl.localcast">
+                        <img alt="Get it on Amazon" src="http://storage.googleapis.com/localcast_landing_page/amazon_badge.png" width=70% height=auto/>
+                    </a>
+
+                </div>
+                <div class="modal-footer">
+
+                    <a href="#" id="android_download_close" class="waves-effect btn-flat modal-close right">Close</a>
+
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
     </div>
-  </footer>
 
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.min.js"></script>
-  <script src="js/init.js"></script>
-
+    <script type="text/javascript">
+        $("#android_download_close").click(function () {
+            $('#modal1').modal('hide');
+            console.log("close");
+        });
+    </script>
 </body>
 
 </html>
