@@ -1,1 +1,0 @@
-template: http://startbootstrap.com/template-overviews/creative/
