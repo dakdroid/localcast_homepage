@@ -44,49 +44,80 @@ a img {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-      
-  
     background-image: url(../img/header.jpg);
- 
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -moz-animation: fadein 2s; /* Firefox */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera */
-    animation: fadein 2s;
-}
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    -webkit-animation: fadein 4s;
+    /* Safari and Chrome */
+    -moz-animation: fadein 4s;
+    /* Firefox */
+    -ms-animation: fadein 4s;
+    /* Internet Explorer */
+    -o-animation: fadein 4s;
+    /* Opera */
+    animation: fadein 4s;
 }
 
-/* Safari and Chrome */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
-
-/* Opera */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
 .header_about .header_text {
     position: relative;
     width: 100%;
     padding-top: 100px;
     text-align: center;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari and Chrome */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .social_media {
@@ -95,17 +126,26 @@ a img {
     text-align: center;
     vertical-align: middle;
 }
+
+
 /* The animation code */
+
 @keyframes animate_in {
-    from {transform: scale(0.1);}
-    to {transform: scale(1);}
+    from {
+        transform: scale(0.1);
+    }
+    to {
+        transform: scale(1);
+    }
 }
+
 .download_button {
     z-index: 10;
-   animation-name: animate_in;
+    animation-name: animate_in;
     animation-duration: 1s;
     animation-delay: 1s;
 }
+
 .devices-text {
     padding-top: 16px;
     padding-bottom: 30px;
@@ -123,17 +163,20 @@ a img {
     color: #3F51B5 !important;
     margin: 30px;
 }
+
 .faq-section-top {
-       border-left: 4px solid #FFC107;
-padding-left: 12px;
-    margin: 30px;
-}
-.faq-section-bottom {
-    margin: 30px;
-}.faq-title {
+    border-left: 4px solid #FFC107;
+    padding-left: 12px;
     margin: 30px;
 }
 
+.faq-section-bottom {
+    margin: 30px;
+}
+
+.faq-title {
+    margin: 30px;
+}
 
 .logo-image {
     height: 50px;
@@ -142,12 +185,10 @@ padding-left: 12px;
 
 .devices-image {
     position: relative;
-    height:auto;
+    height: auto;
     width: 100%;
     background-size: cover;
 }
-
-
 
 
 /**** Mobile layout ****/
@@ -158,7 +199,6 @@ padding-left: 12px;
         width: 50px;
         padding-top: 10px;
     }
-   
     .android-footer .mdl-mega-footer--bottom-section {
         display: none;
     }
