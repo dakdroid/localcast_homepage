@@ -159,7 +159,26 @@
       </footer>
     </main>
   </div>
+<script async>
+      //Handle old anchors
+    function setFaqActive() {
+      window.location.href = "faq.html";
+            ga('send', 'event', 'FAQ', 'FAQ', 'FAQ');
 
+    }
+    function checkURL() {
+      var urlSplit = document.URL.split("#");
+      if (urlSplit[1]) {
+        console.log("split: " + urlSplit[1]);
+        if (urlSplit[1] == "faq-panel" || urlSplit[1] == "troubleshooting") {
+          setFaqActive();
+        } else if (urlSplit[1] == "android") {
+          setFaqActive();
+        }
+      }
+    }
+    checkURL();
+  </script>
 </body>
 
 </html>

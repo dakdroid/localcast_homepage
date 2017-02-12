@@ -38,6 +38,7 @@ margin: 10px;
 .is-compact .mdl-layout__title span {
   display: none;
 }
+
 .is-compact .download_button {
   display: none;
 }
