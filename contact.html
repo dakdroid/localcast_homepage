@@ -1,155 +1,100 @@
 <!doctype html>
-<html lang="en">
-
+<html lang=en>
 <head>
-  <title>LocalCast</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="LocalCast - Get all your media on the Chromecast 1 + 2 + Audio, Amazon Fire TV and Stick, Android TV, Apple TV, Bravia SmartTVs, DLNA Renderers, Google Cast for Audio, Google Cast enabled TVs, Nexus Player, Nvidia Shield, LG SmartTVs, Panasonic SmartTVs, Samsung SmartTVs, SmartTVs, Sonos, Sony SmartTVs,  Xbox 360, Xbox One">
-  <meta name="author" content="Stefan Pledl">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="theme-color" content="#03a9f4">
-  <link rel="icon" sizes="192x192" href="images/icon_192.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-light_blue.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-52600289-2', 'auto');
-    ga('send', 'pageview');
-  </script>
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-  <script>
-    window.addEventListener("load", function() {
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#edeff5",
-            "text": "#838391"
-          },
-          "button": {
-            "background": "transparent",
-            "text": "#4b81e8",
-            "border": "#4b81e8"
-          }
-        }
-      })
-    });
-  </script>
+<title>LocalCast</title>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=description content="LocalCast - Get all your media on the Chromecast 1 + 2 + Audio, Amazon Fire TV and Stick, Android TV, Apple TV, Bravia SmartTVs, DLNA Renderers, Google Cast for Audio, Google Cast enabled TVs, Nexus Player, Nvidia Shield, LG SmartTVs, Panasonic SmartTVs, Samsung SmartTVs, SmartTVs, Sonos, Sony SmartTVs,  Xbox 360, Xbox One">
+<meta name=author content="Stefan Pledl">
+<meta name=viewport content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name=theme-color content=#03a9f4>
+<link rel=icon sizes=192x192 href=images/icon_192.png>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel=stylesheet href=https://code.getmdl.io/1.3.0/material.amber-light_blue.min.css />
+<link rel=stylesheet href=css/styles.css />
+<link rel=stylesheet href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src=https://apis.google.com/js/platform.js async defer></script>
+<script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-52600289-2","auto");ga("send","pageview");</script>
+<link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css />
+<script src=//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#edeff5",text:"#838391"},button:{background:"transparent",text:"#4b81e8",border:"#4b81e8"}}})});</script>
 </head>
-
 <body>
-  <div id="fb-root"></div>
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=751751861600211";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-      <div class="mdl-layout__header-row portfolio-logo-row"> <span class="mdl-layout__title">
-                            <div class="portfolio-logo"></div>
-                            <span class="mdl-layout__title_top">LocalCast</span> <span class="mdl-layout__title_bottom">Get all your media on the TV!</span>
-        <button id="download_button" class="download_button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"> <i class="material-icons">file_download</i> </button>
-        <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="download_button">
-          <li class="mdl-menu__item">
-            <a target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--primary mdl-color-text--white" href="https://play.google.com/store/apps/details?id=de.stefanpledl.localcast" onclick="ga('send', 'event', 'Download', 'Android', 'Android');"> <i class="material-icons">android</i>
-            </a>
-          </li>
-          <li class="mdl-menu__item">
-            <a target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--primary mdl-color-text--white" href="https://itunes.apple.com/de/app/localcast-for-plex-dlna-chromecast/id969804264" onclick="ga('send', 'event', 'Download', 'iOS', 'iOS');">
-              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="#ffffff" d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" /> </svg>
-            </a>
-          </li>
-        </ul>
-        </span>
-      </div>
-      <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-        <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> <a class="mdl-navigation__link" href="index.html">Features</a> <a class="mdl-navigation__link" href="faq.html">FAQ</a> <a class="mdl-navigation__link is-active" href="contact.html">Contact</a> <a class="mdl-navigation__link" href="https://play.google.com/store/apps/dev?id=4965522548888268835" target="_blank">More apps</a> </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-      <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> <a class="mdl-navigation__link is-active" href="index.html">Features</a> <a class="mdl-navigation__link" href="faq.html">FAQ</a> <a class="mdl-navigation__link" href="contact.html">Contact</a> <a class="mdl-navigation__link" href="https://play.google.com/store/apps/dev?id=4965522548888268835" target="_blank">More apps</a> </nav>
-    </div>
-    <main class="mdl-layout__content">
-                    <div class="faq-title mdl-typography  mdl-typography--text-center mdl-typography--display-1-color-contrast">Contact</div>
-
-      <div class="android-screen-section mdl-typography--text-center">
-        <div class="contact-text mdl-typography--font-light">Please check out the FAQ first, if you email me about something which is answered there, I'll ask you to read it:
-          <br>
-          <br>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='faq.html'">FAQ</button>
-          <br>
-          <br>If you have further questions, you can contact me via Email, Twitter, Google Plus or on my Facebook Fanpage.</div>
-        <br>
-        <div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Email</div>
-        <div class="contact-text mdl-typography--font-light">Please use the Feedback & Support button in the app to send an email. It adds valuable information automatically to the email text.</div>
-        <br>
-        <br>
-        <div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Twitter</div>
-        <br>
-        <div ALIGN="center"><a href="https://twitter.com/intent/tweet?screen_name=dakdroid" class="twitter-mention-button" data-size="large">Tweet to @dakdroid</a>
-          <script>
-            ! function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0],
-                p = /^http:/.test(d.location) ? 'http' : 'https';
-              if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + '://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js, fjs);
-              }
-            }(document, 'script', 'twitter-wjs');
-          </script>
-        </div>
-        <br>
-        <br>
-        <div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Google+</div>
-        <br>
-        <!-- Place this tag where you want the widget to render. -->
-        <div class="g-person" data-href="//plus.google.com/u/0/109720416927515295704" data-rel="author"></div>
-        <br>
-        <br>
-        <br>
-        <div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Facebook</div>
-        <br>
-        <div class="fb-page" data-href="https://www.facebook.com/LocalCast/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <blockquote cite="https://www.facebook.com/LocalCast/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/LocalCast/">LocalCast</a>
-          </blockquote>
-        </div>
-      </div>
-      <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__right-section">
-          <ul class="mdl-mini-footer__link-list">
-            <li><a href="http://www.siphorsepowerdyno.de/impressum.html">Disclaimer</a>
-            </li>
-            <li><a href="http://www.localcast-app.com/privacy_policy.html">Privacy & Terms</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </main>
-  </div>
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<div id=fb-root></div>
+<script>(function(e,a,f){var c,b=e.getElementsByTagName(a)[0];if(e.getElementById(f)){return}c=e.createElement(a);c.id=f;c.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=751751861600211";b.parentNode.insertBefore(c,b)}(document,"script","facebook-jssdk"));</script>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+<div class="mdl-layout__header-row portfolio-logo-row"> <span class=mdl-layout__title>
+<div class=portfolio-logo></div>
+<span class=mdl-layout__title_top>LocalCast</span> <span class=mdl-layout__title_bottom>Get all your media on the TV!</span>
+<button id=download_button class="download_button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"> <i class=material-icons>file_download</i> </button>
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for=download_button>
+<li class=mdl-menu__item>
+<a target=_blank class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--primary mdl-color-text--white" href="https://play.google.com/store/apps/details?id=de.stefanpledl.localcast" onclick="ga('send','event','Download','Android','Android')"> <i class=material-icons>android</i>
+</a>
+</li>
+<li class=mdl-menu__item>
+<a target=_blank class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--primary mdl-color-text--white" href=https://itunes.apple.com/de/app/localcast-for-plex-dlna-chromecast/id969804264 onclick="ga('send','event','Download','iOS','iOS')">
+<svg style=width:24px;height:24px viewBox="0 0 24 24">
+<path fill=#ffffff d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" /> </svg>
+</a>
+</li>
+</ul>
+</span>
+</div>
+<div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> <a class=mdl-navigation__link href=index.html>Features</a> <a class=mdl-navigation__link href=faq.html>FAQ</a> <a class="mdl-navigation__link is-active" href=contact.html>Contact</a> <a class=mdl-navigation__link href="https://play.google.com/store/apps/dev?id=4965522548888268835" target=_blank>More apps</a> </nav>
+</div>
+</header>
+<div class="mdl-layout__drawer mdl-layout--small-screen-only">
+<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> <a class="mdl-navigation__link is-active" href=index.html>Features</a> <a class=mdl-navigation__link href=faq.html>FAQ</a> <a class=mdl-navigation__link href=contact.html>Contact</a> <a class=mdl-navigation__link href="https://play.google.com/store/apps/dev?id=4965522548888268835" target=_blank>More apps</a> </nav>
+</div>
+<main class=mdl-layout__content>
+<div class="faq-title mdl-typography mdl-typography--text-center mdl-typography--display-1-color-contrast">Contact</div>
+<div class="android-screen-section mdl-typography--text-center">
+<div class="contact-text mdl-typography--font-light">Please check out the FAQ first, if you email me about something which is answered there, I'll ask you to read it:
+<br>
+<br>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='faq.html'">FAQ</button>
+<br>
+<br>If you have further questions, you can contact me via Email, Twitter, Google Plus or on my Facebook Fanpage.</div>
+<br>
+<div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Email</div>
+<div class="contact-text mdl-typography--font-light">Please use the Feedback & Support button in the app to send an email. It adds valuable information automatically to the email text.</div>
+<br>
+<br>
+<div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Twitter</div>
+<br>
+<div ALIGN=center><a href="https://twitter.com/intent/tweet?screen_name=dakdroid" class=twitter-mention-button data-size=large>Tweet to @dakdroid</a>
+<script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
+</div>
+<br>
+<br>
+<div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Google+</div>
+<br>
+<div class=g-person data-href=//plus.google.com/u/0/109720416927515295704 data-rel=author></div>
+<br>
+<br>
+<br>
+<div class="mdl-typography--font-light mdl-typography--headline-color-contrast">Facebook</div>
+<br>
+<div class=fb-page data-href=https://www.facebook.com/LocalCast/ data-tabs=timeline data-small-header=false data-adapt-container-width=true data-hide-cover=false data-show-facepile=true>
+<blockquote cite=https://www.facebook.com/LocalCast/ class=fb-xfbml-parse-ignore><a href=https://www.facebook.com/LocalCast/>LocalCast</a>
+</blockquote>
+</div>
+</div>
+<footer class=mdl-mini-footer>
+<div class=mdl-mini-footer__right-section>
+<ul class=mdl-mini-footer__link-list>
+<li><a href=http://www.siphorsepowerdyno.de/impressum.html>Disclaimer</a>
+</li>
+<li><a href=http://www.localcast-app.com/privacy_policy.html>Privacy & Terms</a>
+</li>
+</ul>
+</div>
+</footer>
+</main>
+</div>
+<script src=https://code.getmdl.io/1.3.0/material.min.js></script>
 </body>
-
 </html>
