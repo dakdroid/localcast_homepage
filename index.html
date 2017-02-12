@@ -53,6 +53,16 @@
     <script src="js/material.min.js"></script>
   <script async src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
   
+    <script type="text/javascript">
+      var urlSplit = document.URL.split("#");
+      if (urlSplit[1]) {
+        console.log("split: " + urlSplit[1]);
+        if (urlSplit[1] == "faq-panel" || urlSplit[1] == "troubleshooting" || urlSplit[1] == "android") {
+            window.location.href = "faq.html";
+            ga('send', 'event', 'FAQ', 'FAQ', 'FAQ');
+        }
+      }
+  </script>
 </head>
 
 <body>
@@ -159,26 +169,7 @@
       </footer>
     </main>
   </div>
-<script>
-      //Handle old anchors
-    function setFaqActive() {
-      window.location.href = "faq.html";
-            ga('send', 'event', 'FAQ', 'FAQ', 'FAQ');
 
-    }
-    function checkURL() {
-      var urlSplit = document.URL.split("#");
-      if (urlSplit[1]) {
-        console.log("split: " + urlSplit[1]);
-        if (urlSplit[1] == "faq-panel" || urlSplit[1] == "troubleshooting") {
-          setFaqActive();
-        } else if (urlSplit[1] == "android") {
-          setFaqActive();
-        }
-      }
-    }
-    checkURL();
-  </script>
 </body>
 
 </html>
