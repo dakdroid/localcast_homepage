@@ -35,20 +35,10 @@
 margin: 10px;
 }
 
-.is-compact .mdl-layout__title span {
-  display: none;
-}
-.is-compact .download_button {
-  display: none;
-}
 
 
 .portfolio-logo-row {
   min-height: 200px;
-}
-
-.is-compact .portfolio-logo-row {
-  min-height: auto;
 }
 
 .portfolio-logo {
@@ -57,24 +47,6 @@ margin: 10px;
   height: 80px;
   width: 80px;
   margin: 50px auto 0px auto;
-}
-
-.logo-container-left {
-  
-  height: 80px;
-  width: 30%;
-}
-.logo-container-right {
-  
-  height: 80px;
-  width: 30%;
-  
-}
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
 }
 
 .portfolio-navigation-row {
@@ -133,26 +105,6 @@ img.article-image {
   margin: auto;
 }
 
-.portfolio-copy {
-  max-width: 700px;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-left-padding{
-  padding-left: 0;
-}
-
-.no-bottom-padding {
-  padding-bottom: 0;
-}
-
-.padding-top {
-  padding: 10px 0 0;
-}
-
 footer {
   background-image: url(../images/footer-background.png);
   background-size: cover;
@@ -193,12 +145,6 @@ footer {
 .faq-link {
     text-decoration: none;
     color: #3F51B5 !important;
-}
-
-.faq-link-to-main {
-    text-decoration: none;
-    color: #3F51B5 !important;
-    margin: 30px;
 }
 
 .faq-section-top {
