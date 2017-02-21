@@ -9,7 +9,7 @@
     <meta name="author" content="Stefan Pledl">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="theme-color" content="#03a9f4">
-    <script async defer src="js/material.min.js"></script>
+
     <link rel="icon" sizes="192x192" href="images/icon_192.png">
     <script>
          (function (i, s, o, g, r, a, m) {
@@ -63,10 +63,26 @@
             wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
             s.parentNode.insertBefore(wf, s);
         })(document);
-       
+              function loadCSS(href, before, media) {
+            "use strict";
+            var ss = window.document.createElement("link");
+            var ref = before || window.document.getElementsByTagName("script")[0];
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore(ss, ref);
+            setTimeout(function () {
+                ss.media = media || "all";
+            });
+        }
+        
+         window.onload = function () {
+            loadCSS('//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css')
+            loadCSS('css/material.amber-light_blue.min.css')
+        }
     </script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
-    <link rel="stylesheet" href="css/material.amber-light_blue.min.css">
+    
+    <script async defer src="js/material.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 
     <script async defer src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
