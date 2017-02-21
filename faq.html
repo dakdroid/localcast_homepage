@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="theme-color" content="#03a9f4">
     <meta http-equiv="Cache-control" content="public">
-
     <link rel="icon" sizes="192x192" href="images/icon_192.png">
     <script async>
         (function (i, s, o, g, r, a, m) {
@@ -18,16 +17,14 @@
             i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
-            a = s.createElement(o)
-                , m = s.getElementsByTagName(o)[0];
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-52600289-2', 'auto');
         ga('send', 'pageview');
-        
-         window.addEventListener("load", function () {
+        window.addEventListener("load", function () {
             window.cookieconsent.initialise({
                 "palette": {
                     "popup": {
@@ -42,20 +39,8 @@
                 }
             })
         });
-        
-        WebFontConfig = {
-            google: {
-                families: ['Material+Icons']
-            }
-        };
-        (function (d) {
-            var wf = d.createElement('script')
-                , s = d.scripts[0];
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-            s.parentNode.insertBefore(wf, s);
-        })(document);
-        
-         function loadCSS(href, before, media) {
+
+        function loadCSS(href, before, media) {
             "use strict";
             var ss = window.document.createElement("link");
             var ref = before || window.document.getElementsByTagName("script")[0];
@@ -67,16 +52,24 @@
                 ss.media = media || "all";
             });
         }
-        
-         window.onload = function () {
-                loadCSS('//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css')
+        window.onload = function () {
+            loadCSS('//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css')
+            WebFontConfig = {
+                google: {
+                    families: ['Material+Icons']
+                }
+            };
+            (function (d) {
+                var wf = d.createElement('script')
+                    , s = d.scripts[0];
+                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+                s.parentNode.insertBefore(wf, s);
+            })(document);
         }
     </script>
-    
     <script async src="js/material.min.js"></script>
     <link rel="stylesheet" href="css/material.amber-light_blue.min.css">
     <link rel="stylesheet" href="css/styles.css">
-
     <script async defer src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 </head>
 
@@ -103,8 +96,7 @@
                 </ul>
                 </span>
             </div>
-            
-        <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> <a class="mdl-navigation__link" href="index.html">Features</a> <a class="mdl-navigation__link is-active" href="faq.html">FAQ</a> <a class="mdl-navigation__link" href="contact.html">Contact</a> <a class="mdl-navigation__link" href="https://play.google.com/store/apps/dev?id=4965522548888268835" target="_blank">More apps</a> </nav>
             </div>
         </header>
