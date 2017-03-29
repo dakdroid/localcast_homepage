@@ -104,203 +104,197 @@
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> <a class="mdl-navigation__link is-active" href="index.html">Features</a> <a class="mdl-navigation__link" href="faq.html">FAQ</a> <a class="mdl-navigation__link" href="contact.html">Contact</a> <a class="mdl-navigation__link" href="https://play.google.com/store/apps/dev?id=4965522548888268835" target="_blank">More apps</a> </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="mdl-grid portfolio-max-width">
-                <div>
-                    <div>
-                        <a name="top_faq"></a>
-                        <br>
-                        <div class="faq-title mdl-typography  mdl-typography--text-center mdl-typography--display-1-color-contrast">FAQ</div>
-                        <div class="faq-title mdl-typography mdl-typography--headline-color-contrast">Contents</div>
-                        <div class="faq-section-top">
-                            <div><a class="faq-link mdl-typography--subhead" href="#video_stutter">Why does my video pause & play, stutter or lag?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#device_missing">Where is my cast device, it's not in the list?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#kodi">Kodi: How can I enable or disable this?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#codecs1">Why is there no audio, but I can see the video?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#codecs2">Why can't I see the video, but I can hear the audio?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#proversion_ads_problem">I purchased the Pro Version, why are there advertisements?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#proversion_prices">Why are there different prices for the Pro Version?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#dlna_smb">Should I use DLNA or SMB?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#ps3">Can I stream to my PS3?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#subtitles">Subtitles, pan, zoom or rotation doesn't work, why?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#windows">I wan't to stream from Windows, but I can't see the server in the DLNA section, why?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#refunds">Can I get a refund?</a> </div>
-                            <div><a class="faq-link mdl-typography--subhead" href="#developer">I'm a developer and want to open LocalCast. Give me something to copy/paste!</a> </div>
-                        </div>
-                        <div class="faq-section-bottom">
-                            <a name="video_stutter"></a>
-                            <div class="mdl-typography mdl-typography--headline">Why does my video pause & play, stutter or lag?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--subhead">Internet streams</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">Stutter can be caused by a busy server or if the video has a bitrate which is too high for the Chromecast to keep up. Especially on weekends the content providers are overloaded and can't provide the videos fast enough. If possible try a SD stream instead of HD.
-                                <br> The Chromecast can't buffer some streams at all and has a very small buffer. this might get fixed with a future Chromecast firmware update.</div>
-                            <br>
-                            <br>
-                            <div class="mdl-typography mdl-typography--subhead">Bottleneck - Local network streams</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">Don't try to stream Blue-ray quality movies over WiFi. E.g. the Chromecast only supports 2.4GHz which is not enough to stream those movies. It won't work.
-                                <br>
-                                <br> Bitrate: Some phones shoot videos with a really high bitrate. See above.</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">The Chromecast 1 or the Amazon Fire TV Stick both come with a HDMI extender cord and with a extra power supply unit.
-                                <br>
-                                <br>USE BOTH!
-                                <br>
-                                <br>The extra juice from the power supply (instead of plugging the usb cord into your TV) can improve the WiFi signal. It brings the dongle further away from the TV, which can improve the signal. </div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="kodi"></a>
-                            <div class="mdl-typography mdl-typography--headline">Kodi: How can I enable or disable this?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">LocalCast features a seamless Kodi integration. From the Settings(-> Kodi) you can easily write a file which tells Kodi to use LocalCast. You can then enjoy all your media on the TV.
-                                <br>
-                                <br> One caveat: If you want to watch Kodi on your device again, you either have to delete the file, which was written or reopen the video in another app. Both things can be done in the Settings (-> Kodi).</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="device_missing"></a>
-                            <div class="mdl-typography mdl-typography--headline">Where is my cast device, it's not in the list?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">1. Make sure that all your devices are on the same network.
-                                <br>2. Turn WiFi off and on again on your streaming device. Wait a couple of second and check if it appears in the list.
-                                <br>3. Swipe LocalCast away in the multi tasking menu - reopen it. Wait a couple of second and check if it appears in the list.
-                                <br>4. Reboot all your things (Router, streaming device, receiving device)</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">Xbox 360:
-                                <br>Go to Settings: Turn "Play To" on
-                                <br>If it doesn't work: Turn "Play To" off and on
-                                <br>
-                                <br>Xbox One:
-                                <br>Install Xbox Video and Xbox Music
-                                <br>Got Xbox One Settings: Turn "Play To" on
-                                <br>If it doesn't work: Turn "Play To" off and on
-                                <br>Playing a game isn't possible while casting. </div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="codecs1"></a>
-                            <div class="mdl-typography mdl-typography--headline">Why can't I hear the audio, but I can see the video?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">This means that your device (Chromecast, Smart TV, ...) doesn't support the audio codec of your video.
-                                <br>All receiving devices support a couple of codecs and most video formats.
-                                <br>For example the Chromecast's supported formats and codecs are listed <a class="faq-link mdl-typography" href="https://developers.google.com/cast/docs/media">here</a>.
-                                <br>
-                                <br>Video files are containers which hold a video and a audio file. If only one of both plays, then the other one uses a codec which is not supported by your receiving device. To convert the files on your PC I recommend <a class="faq-link mdl-typography" href="http://www.handbrake.fr">www.handbrake.fr</a> </div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="codecs2"></a>
-                            <div class="mdl-typography mdl-typography--headline">Why can't I see the video, but I can hear the audio?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">This means that your device (Chromecast, Smart TV, ...) doesn't support the video codec of your video.
-                                <br>All receiving devices support a couple of codecs and most video formats.
-                                <br>For example the Chromecast's supported formats and codecs are listed <a class="faq-link mdl-typography" href="https://developers.google.com/cast/docs/media">here</a>.
-                                <br>
-                                <br>Video files are containers which hold a video and a audio file. If only one of both plays, then the other one uses a codec which is not supported by your receiving device. To convert the files on your PC I recommend <a class="faq-link mdl-typography" href="http://www.handbrake.fr">www.handbrake.fr</a> </div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a id="proversion_ads_problem" name="proversion_ads_problem"></a>
-                            <div id="proversion_ads_problem_div" class="mdl-typography mdl-typography--headline">I purchased the Pro Version, why are there advertisements?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">This happens when the play store app doesn't report that there are purchases and this can have multiple reasons(, most likely because you have multiple Google accounts on your phone or if your Google Wallet account isn't set up properly.):
-                                <br>
-                                <br>Uninstall LocalCast
-                                <br>In a BROWSER on your desktop: Log in to the web interface of Google Play with the account you used to purchase
-                                <br>Install LocalCast from the web interface to your device. If you have no desktop PC: Don't let it open the Playstore app, but use the install button and choose your device in the browser.
-                                <br>
-                                <br>If this still doesn't help:
-                                <br>
-                                <br>Uninstall LocalCast
-                                <br>Clear the Playstore data: Settings -> Apps -> Google Playstore -> Clear data
-                                <br>Open the Playstore and accept the agreement
-                                <br>Reinstall LocalCast
-                                <br>
-                                <br>If this doesn't help, please email me via the "Send email"-button in the app.</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="proversion_prices"></a>
-                            <div class="mdl-typography mdl-typography--headline">Why are there different prices for the Pro Version?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">There are multiple price options, because I want you to decide how much the app is worth to you.
-                                <br>All purchases unlock the Pro Version, there is no difference, besides the price.
-                                <br>There are multiple one time purchases and subscriptions ("/month" or "/year").
-                                <br>If you aren't sure what the purchase is, just touch it. The official Google Playstore dialog opens, which should make things clearer.</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="dlna_smb"></a>
-                            <div class="mdl-typography mdl-typography--headline">Should I use DLNA or SMB?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">DLNA is a direct connection to your cast device.
-                                <br>SMB has to be routed through the phone/tablet, which doubles the needed bandwidth.
-                                <br>Route audio doesn't work with SMB.
-                                <br>If possible choose a DLNA server like <a class="faq-link mdl-typography" href="http://www.serviio.org/">Serviio</a>.</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="ps3"></a>
-                            <div class="mdl-typography mdl-typography--headline">Can I stream to my PS3?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">It's not possible. You cannot stream to the PS3. Nope. Buy a Chromecast. Go away now..</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="subtitles"></a>
-                            <div class="mdl-typography mdl-typography--headline">Subtitles, pan, zoom or rotation doesn't work, why?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">Only Google Cast devices support these features, e.g. the Chromecast and the Nexus Player
-                                <br>You can find these features on the "Now Playing" screen
-                                <br>
-                                <br>If there is a subtitle file with the same name as the video file, you will be asked if the subtitle should be added.
-                                <br>
-                                <br>Some DLNA servers support subtitles, some don't. So you might be able to add subtitles from DLNA servers, too.
-                                <br>
-                                <br>LocalCast has a built-in Opensubtitle search. Just start your movie or series and add your sub in a couple of seconds from the net!</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="windows"></a>
-                            <div class="mdl-typography mdl-typography--headline">I wan't to stream from Windows, but I can't see the server in the DLNA section, why?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">The computer's network has to be set to a home network!
-                                <br> <a class="faq-link mdl-typography" href="http://www.google.com/search?q=windows%20home%20network%20setup">See here</a> </div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br>
-                            <a name="refunds"></a>
-                            <div class="mdl-typography mdl-typography--headline">Can I get a refund?</div>
-                            <br>
-                            <div class="mdl-typography mdl-typography--body-1">I offer no refunds. You can try the free version as long as you want. Please don't buy the Pro Version if something doesn't work, send me a email instead via the "Send email"-button in the app.</div>
-                            <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                            <hr>
-                            <br> </div>
-                        <a name="developer"></a>
-                        <div class="mdl-typography mdl-typography--headline">I'm a developer and want to open LocalCast. Give me something to copy/paste!</div>
-                        <br>
-                        <div class="mdl-typography mdl-typography--body-1">Here: <a href=" http://pastebin.com/t0iddd0m">Pastebin source #1 incase the below refuses to load.</a>
-                            <br> <a href="http://pastebin.com/xhV4s5sm">Pastebin source #2 incase the below refuses to load.</a> </div>
-                        <br>
-                        <br>
-                        <div class="mdl-typography mdl-typography--headline">Check if LocalCast is installed</div>
-                        <br>
-                        <div class="mdl-typography mdl-typography--body-1">
-                            <script src="//pastebin.com/embed_js/t0iddd0m"></script>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="mdl-typography mdl-typography--headline">Launch it</div>
-                        <br>
-                        <div class="mdl-typography mdl-typography--body-1">
-                            <script src="//pastebin.com/embed_js/xhV4s5sm"></script>
-                        </div>
-                        <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
-                        <hr>
-                        <br> </div>
+            <div class="faq-title mdl-typography  mdl-typography--text-center mdl-typography--display-1-color-contrast">FAQ</div>
+<div class="mdl-grid portfolio-max-width">
+ <a name="top_faq"></a>
+                <div class="faq-section-top">
+                    <div><a class="faq-link mdl-typography--subhead" href="#video_stutter">Why does my video pause & play, stutter or lag?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#device_missing">Where is my cast device, it's not in the list?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#kodi">Kodi: How can I enable or disable this?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#codecs1">Why is there no audio, but I can see the video?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#codecs2">Why can't I see the video, but I can hear the audio?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#proversion_ads_problem">I purchased the Pro Version, why are there advertisements?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#proversion_prices">Why are there different prices for the Pro Version?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#dlna_smb">Should I use DLNA or SMB?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#ps3">Can I stream to my PS3?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#subtitles">Subtitles, pan, zoom or rotation doesn't work, why?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#windows">I wan't to stream from Windows, but I can't see the server in the DLNA section, why?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#refunds">Can I get a refund?</a> </div>
+                    <div><a class="faq-link mdl-typography--subhead" href="#developer">I'm a developer and want to open LocalCast. Give me something to copy/paste!</a> </div>
                 </div>
-            </div>
+                <div class="faq-section-bottom">
+                    <a name="video_stutter"></a>
+                    <div class="mdl-typography mdl-typography--headline">Why does my video pause & play, stutter or lag?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--subhead">Internet streams</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">Stutter can be caused by a busy server or if the video has a bitrate which is too high for the Chromecast to keep up. Especially on weekends the content providers are overloaded and can't provide the videos fast enough. If possible try a SD stream instead of HD.
+                        <br> The Chromecast can't buffer some streams at all and has a very small buffer. this might get fixed with a future Chromecast firmware update.</div>
+                    <br>
+                    <br>
+                    <div class="mdl-typography mdl-typography--subhead">Bottleneck - Local network streams</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">Don't try to stream Blue-ray quality movies over WiFi. E.g. the Chromecast only supports 2.4GHz which is not enough to stream those movies. It won't work.
+                        <br>
+                        <br> Bitrate: Some phones shoot videos with a really high bitrate. See above.</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">The Chromecast 1 or the Amazon Fire TV Stick both come with a HDMI extender cord and with a extra power supply unit.
+                        <br>
+                        <br>USE BOTH!
+                        <br>
+                        <br>The extra juice from the power supply (instead of plugging the usb cord into your TV) can improve the WiFi signal. It brings the dongle further away from the TV, which can improve the signal. </div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="kodi"></a>
+                    <div class="mdl-typography mdl-typography--headline">Kodi: How can I enable or disable this?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">LocalCast features a seamless Kodi integration. From the Settings(-> Kodi) you can easily write a file which tells Kodi to use LocalCast. You can then enjoy all your media on the TV.
+                        <br>
+                        <br> One caveat: If you want to watch Kodi on your device again, you either have to delete the file, which was written or reopen the video in another app. Both things can be done in the Settings (-> Kodi).</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="device_missing"></a>
+                    <div class="mdl-typography mdl-typography--headline">Where is my cast device, it's not in the list?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">1. Make sure that all your devices are on the same network.
+                        <br>2. Turn WiFi off and on again on your streaming device. Wait a couple of second and check if it appears in the list.
+                        <br>3. Swipe LocalCast away in the multi tasking menu - reopen it. Wait a couple of second and check if it appears in the list.
+                        <br>4. Reboot all your things (Router, streaming device, receiving device)</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">Xbox 360:
+                        <br>Go to Settings: Turn "Play To" on
+                        <br>If it doesn't work: Turn "Play To" off and on
+                        <br>
+                        <br>Xbox One:
+                        <br>Install Xbox Video and Xbox Music
+                        <br>Got Xbox One Settings: Turn "Play To" on
+                        <br>If it doesn't work: Turn "Play To" off and on
+                        <br>Playing a game isn't possible while casting. </div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="codecs1"></a>
+                    <div class="mdl-typography mdl-typography--headline">Why can't I hear the audio, but I can see the video?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">This means that your device (Chromecast, Smart TV, ...) doesn't support the audio codec of your video.
+                        <br>All receiving devices support a couple of codecs and most video formats.
+                        <br>For example the Chromecast's supported formats and codecs are listed <a class="faq-link mdl-typography" href="https://developers.google.com/cast/docs/media">here</a>.
+                        <br>
+                        <br>Video files are containers which hold a video and a audio file. If only one of both plays, then the other one uses a codec which is not supported by your receiving device. To convert the files on your PC I recommend <a class="faq-link mdl-typography" href="http://www.handbrake.fr">www.handbrake.fr</a> </div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="codecs2"></a>
+                    <div class="mdl-typography mdl-typography--headline">Why can't I see the video, but I can hear the audio?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">This means that your device (Chromecast, Smart TV, ...) doesn't support the video codec of your video.
+                        <br>All receiving devices support a couple of codecs and most video formats.
+                        <br>For example the Chromecast's supported formats and codecs are listed <a class="faq-link mdl-typography" href="https://developers.google.com/cast/docs/media">here</a>.
+                        <br>
+                        <br>Video files are containers which hold a video and a audio file. If only one of both plays, then the other one uses a codec which is not supported by your receiving device. To convert the files on your PC I recommend <a class="faq-link mdl-typography" href="http://www.handbrake.fr">www.handbrake.fr</a> </div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a id="proversion_ads_problem" name="proversion_ads_problem"></a>
+                    <div id="proversion_ads_problem_div" class="mdl-typography mdl-typography--headline">I purchased the Pro Version, why are there advertisements?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">This happens when the play store app doesn't report that there are purchases and this can have multiple reasons(, most likely because you have multiple Google accounts on your phone or if your Google Wallet account isn't set up properly.):
+                        <br>
+                        <br>Uninstall LocalCast
+                        <br>In a BROWSER on your desktop: Log in to the web interface of Google Play with the account you used to purchase
+                        <br>Install LocalCast from the web interface to your device. If you have no desktop PC: Don't let it open the Playstore app, but use the install button and choose your device in the browser.
+                        <br>
+                        <br>If this still doesn't help:
+                        <br>
+                        <br>Uninstall LocalCast
+                        <br>Clear the Playstore data: Settings -> Apps -> Google Playstore -> Clear data
+                        <br>Open the Playstore and accept the agreement
+                        <br>Reinstall LocalCast
+                        <br>
+                        <br>If this doesn't help, please email me via the "Send email"-button in the app.</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="proversion_prices"></a>
+                    <div class="mdl-typography mdl-typography--headline">Why are there different prices for the Pro Version?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">There are multiple price options, because I want you to decide how much the app is worth to you.
+                        <br>All purchases unlock the Pro Version, there is no difference, besides the price.
+                        <br>There are multiple one time purchases and subscriptions ("/month" or "/year").
+                        <br>If you aren't sure what the purchase is, just touch it. The official Google Playstore dialog opens, which should make things clearer.</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="dlna_smb"></a>
+                    <div class="mdl-typography mdl-typography--headline">Should I use DLNA or SMB?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">DLNA is a direct connection to your cast device.
+                        <br>SMB has to be routed through the phone/tablet, which doubles the needed bandwidth.
+                        <br>Route audio doesn't work with SMB.
+                        <br>If possible choose a DLNA server like <a class="faq-link mdl-typography" href="http://www.serviio.org/">Serviio</a>.</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="ps3"></a>
+                    <div class="mdl-typography mdl-typography--headline">Can I stream to my PS3?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">It's not possible. You cannot stream to the PS3. Nope. Buy a Chromecast. Go away now..</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="subtitles"></a>
+                    <div class="mdl-typography mdl-typography--headline">Subtitles, pan, zoom or rotation doesn't work, why?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">Only Google Cast devices support these features, e.g. the Chromecast and the Nexus Player
+                        <br>You can find these features on the "Now Playing" screen
+                        <br>
+                        <br>If there is a subtitle file with the same name as the video file, you will be asked if the subtitle should be added.
+                        <br>
+                        <br>Some DLNA servers support subtitles, some don't. So you might be able to add subtitles from DLNA servers, too.
+                        <br>
+                        <br>LocalCast has a built-in Opensubtitle search. Just start your movie or series and add your sub in a couple of seconds from the net!</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="windows"></a>
+                    <div class="mdl-typography mdl-typography--headline">I wan't to stream from Windows, but I can't see the server in the DLNA section, why?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">The computer's network has to be set to a home network!
+                        <br> <a class="faq-link mdl-typography" href="http://www.google.com/search?q=windows%20home%20network%20setup">See here</a> </div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br>
+                    <a name="refunds"></a>
+                    <div class="mdl-typography mdl-typography--headline">Can I get a refund?</div>
+                    <br>
+                    <div class="mdl-typography mdl-typography--body-1">I offer no refunds. You can try the free version as long as you want. Please don't buy the Pro Version if something doesn't work, send me a email instead via the "Send email"-button in the app.</div>
+                    <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                    <hr>
+                    <br> </div>
+                <a name="developer"></a>
+                <div class="mdl-typography mdl-typography--headline">I'm a developer and want to open LocalCast. Give me something to copy/paste!</div>
+                <br>
+                <div class="mdl-typography mdl-typography--body-1">Here: <a href=" http://pastebin.com/t0iddd0m">Pastebin source #1 incase the below refuses to load.</a>
+                    <br> <a href="http://pastebin.com/xhV4s5sm">Pastebin source #2 incase the below refuses to load.</a> </div>
+                <br>
+                <br>
+                <div class="mdl-typography mdl-typography--headline">Check if LocalCast is installed</div>
+                <br>
+                <div class="mdl-typography mdl-typography--body-1">
+                    <script src="//pastebin.com/embed_js/t0iddd0m"></script>
+                </div>
+                <br>
+                <br>
+                <div class="mdl-typography mdl-typography--headline">Launch it</div>
+                <br>
+                <div class="mdl-typography mdl-typography--body-1">
+                    <script src="//pastebin.com/embed_js/xhV4s5sm"></script>
+                </div>
+                <br> <a class="faq-link mdl-typography" href="#top_faq">Back to Top<i class="material-icons">expand_less</i></a>
+                <hr>
+                <br> </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
