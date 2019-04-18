@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "de.stefanpledl.localcast",
+    "sha256_cert_fingerprints":
+    ["1B:CD:8D:2B:49:04:21:AD:88:FD:37:5D:A5:9B:2F:DD:2E:35:F3:60:21:58:0C:A1:D6:A4:56:4C:E1:C5:07:22"]
+  }
+}]
